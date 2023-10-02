@@ -1,20 +1,16 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.businesspartners.controller.Suppliers" displayBlock="true">
     <Page id="page" title="{i18n>title}">
     <content>
+        <Input xmlns="sap.m" value="Value 123" id="input0"/>
+        <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
         <Label text="Company" width="100%" id="label0"/>
-        <List noDataText="Drop list items here" id="list0" items="{/BusinessPartnerSet}">
-            <items>
-                <StandardListItem type="Navigation" title="{CompanyName}" description="{WebAddress}" icon="sap-icon://picture" id="item0"/>
-            </items>
-        </List>
+        <StandardListItem type="Navigation" title="{CompanyName}" description="{WebAddress}" icon="sap-icon://picture" id="item0"/>
         <Label text="Product" width="100%" id="label1"/>
         <List noDataText="Drop list items here" id="listProduct" items="{/ProductSet}">
             <items>
                 <StandardListItem type="Navigation" title="{ProductID}" description="{Name}" icon="sap-icon://picture" id="item1"/>
             </items>
         </List>
-        <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
-        <Input xmlns="sap.m" value="Value 123" id="input0"/>
     </content>
     </Page>
 </mvc:View>
