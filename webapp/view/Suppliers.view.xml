@@ -1,16 +1,12 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.businesspartners.controller.Suppliers" displayBlock="true">
     <Page id="page" title="{i18n>title}">
     <content>
+        <Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press=".onDisplayNotFound" class="sapUiTinyMarginEnd"/>
         <Input xmlns="sap.m" value="Value 123" id="input0"/>
         <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
+        <Button xmlns="sap.m" text="Go to Products" id="btnNaviProducts" press="pressMe"/>
         <Label text="Company" width="100%" id="label0"/>
         <StandardListItem type="Navigation" title="{CompanyName}" description="{WebAddress}" icon="sap-icon://picture" id="item0"/>
-        <Label text="Product" width="100%" id="label1"/>
-        <List noDataText="Drop list items here" id="listProduct" items="{/ProductSet}">
-            <items>
-                <StandardListItem type="Navigation" title="{ProductID}" description="{Name}" icon="sap-icon://picture" id="item1"/>
-            </items>
-        </List>
     </content>
     </Page>
 </mvc:View>

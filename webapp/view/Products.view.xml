@@ -1,0 +1,14 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.businesspartners.controller.Products" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <Input xmlns="sap.m" value="Value 123" id="input0"/>
+        <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
+        <Label text="Product" width="100%" id="label1"/>
+        <List noDataText="Drop list items here" id="listProduct" items="{/ProductSet}">
+            <items>
+                <StandardListItem type="Navigation" title="{ProductID}" description="{Name}" icon="sap-icon://picture" id="item1"/>
+            </items>
+        </List>
+    </content>
+    </Page>
+</mvc:View>

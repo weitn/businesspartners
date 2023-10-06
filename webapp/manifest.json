@@ -104,6 +104,7 @@
         "viewPath": "ns.businesspartners.view",
         "controlAggregation": "pages",
         "controlId": "app",
+        "bypassed": { "target": "notFound" },
         "clearControlAggregation": false
       },
       "routes": [
@@ -122,8 +123,19 @@
           "clearControlAggregation": false,
           "viewId": "Suppliers",
           "viewName": "Suppliers"
-        }
-      }
+        },
+        "notFound": {
+          "id": "notFound",
+          "name": "NotFound",
+          "transition": "show",
+          "viewId": "NotFound",
+          "viewName": "NotFound"
+       },
+       "Suppliers": {
+        "viewId": "Suppliers",
+        "viewName": "Suppliers"
+     }
+    }
     },
     "rootView": {
       "viewName": "ns.businesspartners.view.App",
