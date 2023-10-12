@@ -124,8 +124,15 @@
           "viewId": "Suppliers",
           "viewName": "Suppliers"
         },
-        "notFound": {
-          "id": "notFound",
+        "Products": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Products",
+          "viewName": "Products"
+        },
+        "NotFound": {
+          "id": "NotFound",
           "name": "NotFound",
           "transition": "show",
           "viewId": "NotFound",
