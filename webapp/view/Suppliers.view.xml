@@ -1,30 +1,54 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.businesspartners.controller.Suppliers" displayBlock="true">
+<mvc:View 
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form" 
+    controllerName="ns.businesspartners.controller.Suppliers"
+    displayBlock="true">
     <Page id="page" title="{i18n>title} - Suppliers.view.xml" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" cd:w5g.dt.context="/BusinessPartnerSet">
-    <content>
-        <Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press=".onDisplayNotFound" class="sapUiTinyMarginEnd"/>
-        <Input xmlns="sap.m" value="Value 123" id="input0"/>
-        <Select xmlns="sap.m" id="select0" cd:w5g.dt.context="/VH_CountrySet" selectedKey="{Land1} / {Landx} / {Natio}" name="{Land1} / {Landx} / {Natio}">
-            <items>
-                <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item0"/>
-                <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item1"/>
+        <content>
+            <f:SimpleForm id="sfPersonalInfo">
+                <f:content>
+                    <Label id="lblFirstName" text="First Name" />
+                    <Input id="inpFirstName" value="Andrew" maxLength="10" />
+                    <Label id="lblLastName" text="Last Name" textAlign="Center" />
+                    <Input id="inpLastName" value="Tan" maxLength="10" />
+                    <Label id="lblCountry" text="Country" textAlign="Center" />
+                    <Select id="lblcountry">
+					<items>
+						<core:Item id="itmEng" text="England" key="England"/>
+						<core:Item id="itmGer" text="Germany" key="Germany"/>
+						<core:Item id="itmUsa" text="USA" key="USA"/>
+					</items>
+				</Select>
+                </f:content>
+            </f:SimpleForm>
+            <Text id="txt1" text="This is a text" textAlign="Left" />
+                        
+            <Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press=".onDisplayNotFound" class="sapUiTinyMarginEnd"/>
+            <Input xmlns="sap.m" value="Value 123" id="input0"/>
+            <Select xmlns="sap.m" id="select0" cd:w5g.dt.context="/VH_CountrySet" selectedKey="{Land1} / {Landx} / {Natio}" name="{Land1} / {Landx} / {Natio}">
+                <items>
+                    <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item0"/>
+                    <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item1"/>
+                    </items>
+                
+            </Select>
+            <ComboBox xmlns="sap.m" id="box0" cd:w5g.dt.context="/ContactSet" selectedKey="{Address/AddressType}" name="{Category}" showSecondaryValues="true">
+                <items>
+                    <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item2"/>
+                    <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item3"/>
+                    </items>
+                
+            </ComboBox>
+            <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
+            <Button xmlns="sap.m" text="Go to Products" id="btnNaviProducts" press="navToProducts"/>
+            <Label text="Company" width="100%" id="label0"/>
+            <List noDataText="Drop list items here" items="{/BusinessPartnerSet}" id="list0">
+                <items>
+                    <StandardListItem type="Navigation" title="{BusinessPartnerID} / {CompanyName} / {CurrencyCode} / {EmailAddress}" description="{WebAddress}" icon="sap-icon://picture" id="item0_1697078954999"/>
                 </items>
-            
-        </Select>
-        <ComboBox xmlns="sap.m" id="box0" cd:w5g.dt.context="/ContactSet" selectedKey="{Address/AddressType}" name="{Category}" showSecondaryValues="true">
-            <items>
-                <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item2"/>
-                <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item3"/>
-                </items>
-            
-        </ComboBox>
-        <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
-        <Button xmlns="sap.m" text="Go to Products" id="btnNaviProducts" press="navToProducts"/>
-        <Label text="Company" width="100%" id="label0"/>
-        <List noDataText="Drop list items here" items="{/BusinessPartnerSet}" id="list0">
-            <items>
-                <StandardListItem type="Navigation" title="{BusinessPartnerID} / {CompanyName} / {CurrencyCode} / {EmailAddress}" description="{WebAddress}" icon="sap-icon://picture" id="item0_1697078954999"/>
-            </items>
-        </List>
-    </content>
+            </List>
+        </content>
     </Page>
 </mvc:View>

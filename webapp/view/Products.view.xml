@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.businesspartners.controller.Products" displayBlock="true">
-    <Page id="page" title="{i18n>title} - Products.view.xml">
+    <Page id="page" title="{i18n>title} - Products.view.xml" showNavButton="true">
     <content>
         <Input xmlns="sap.m" value="Value 123" id="input0"/>
         <Button xmlns="sap.m" text="Refresh" id="button0" press="pressMe"/>
