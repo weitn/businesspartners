@@ -7,7 +7,12 @@
     displayBlock="true">
     <Page id="page" title="{i18n>title} - Suppliers.view.xml" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" cd:w5g.dt.context="/BusinessPartnerSet">
         <content>
-            <f:SimpleForm id="sfPersonalInfo">
+            <f:SimpleForm
+                id="sfPersonalInfo"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="Personal Info"
+                singleContainerFullSize="false">
                 <f:content>
                     <Label id="lblFirstName" text="First Name" />
                     <Input id="inpFirstName" value="Andrew" maxLength="10" />
