@@ -18,14 +18,24 @@
                     <Input id="inpFirstName" value="Andrew" maxLength="10" />
                     <Label id="lblLastName" text="Last Name" textAlign="Center" />
                     <Input id="inpLastName" value="Tan" maxLength="10" />
+                    <Label id="lblSex" text="Sex" textAlign="Center" />
+                    <Select id="selSex" items="{/VH_SexSet}">
+					    <items>
+                            <core:Item id="itmSex" text="{Sex} / {Shorttext}" key="{Sex}"/>
+					    </items>
+				    </Select>
                     <Label id="lblCountry" text="Country" textAlign="Center" />
-                    <Select id="lblcountry">
-					<items>
-						<core:Item id="itmEng" text="England" key="England"/>
-						<core:Item id="itmGer" text="Germany" key="Germany"/>
-						<core:Item id="itmUsa" text="USA" key="USA"/>
-					</items>
-				</Select>
+                    <Select id="selCountry" items="{/VH_CountrySet}">
+					    <items>
+                            <core:Item id="itmCountry" text="{Land1} / {Landx}" key="{Land1}"/>
+					    </items>
+				    </Select>
+                    <Label id="lblCurrency" text="Currency" />
+                    <Select id="selCurrency" items="{/VH_CurrencySet}">
+					    <items>
+                            <core:Item id="itmCurrency" text="{Waers} / {Ltext}" key="{Waers}"/>
+					    </items>
+				    </Select>
                 </f:content>
             </f:SimpleForm>
             <Text id="txt1" text="This is a text" textAlign="Left" />
